@@ -1,0 +1,25 @@
+// Crear 3 nuevos usuarios
+INSERT INTO usuarios (nombre, apellido, email) VALUES ('María Elena', 'Álvarez', 'nutri.mariaelenaalvarez@outlook.com');
+INSERT INTO usuarios (nombre, apellido, email) VALUES ('Edward', 'Campos', 'edward.campos.fuentes@gmail.com');
+INSERT INTO usuarios (nombre, apellido, email) VALUES ('Camilo', 'Álvarez', 'camilo.emp@gmail.com');
+
+// Recuperar todos los usuarios
+SELECT * FROM users_squema.usuarios;
+
+// Recuperar el primer usuario usando su dirección de correo electrónico
+SELECT * FROM usuarios WHERE email LIKE 'nutri.mariaelenaalvarez@outlook.com';
+
+// Recuperar el último usuario usando su id
+SELECT * FROM usuarios WHERE id = 3;
+
+// Cambiar el usuario con id=3 para que su apellido sea Panqueques
+UPDATE usuarios SET apellido = 'Panqueques' WHERE id = 3;
+
+// Eliminar el usuario con id=2 de la base de datos
+DELETE FROM usuarios WHERE id = 2;
+
+// Obtener todos los usuarios, ordenados por su nombre
+SELECT * FROM usuarios ORDER BY nombre;
+
+// Obtener todos los usuarios, ordenados por su nombre en orden descendente
+SELECT * FROM usuarios ORDER BY nombre DESC;
